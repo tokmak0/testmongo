@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<script>
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+  if(getCookie("name")!==undefined){
+  }
+</script>
+
+
+  <a href="/" style="text-align:center;">Geri Dön</a>
+  <div class="login" >
+    <label>Giriş Yapanların Yorumları</label>
+  <% for(var i=0; i < comment.length; i++) { %>
+
+  <div class="box">
+  <details>
+  <summary>  
+<%= comment[i].name.toUpperCase() %>
+ </summary>
+  <p> <%= comment[i].surname  %> </p>
+</details>
+
+  </div>
+<% } %>
+   
+    
+  </div>
+
+  
+<style>
+
+
+
+
+
+
+body{
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.login label{
+  margin: 8px;
+  text-align: center;
+  font-size: 30px;
+  font-family: Helvetica;
+  font-weight: 700
+}
+
+
+.login{
+  margin: 8px;
+  border-radius: 2px;
+  outline: none;
+  border: 2px solid lightgray;
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  overflow:auto;
+  height:400px;
+}
+.login .input{
+  
+  margin: 8px;
+  border-radius: 2px;
+  outline: none;
+  border: 2px solid lightgray;
+  padding: 12px 10px;
+  transition: border 0.3s ease;
+}
+.login .input:hover, .login .input:focus{
+border: 2px solid #7d7d7d;
+}
+
+.btn-primary{
+  background-color: blue;
+  padding: 12px 20px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  margin: 8px;
+  transition:background-color 0.5s ease;
+  cursor: pointer
+}
+.btn-primary:hover{
+  background-color: #2a2aaa;
+}
+
+
+
+
+.box{
+  border:2px solid #cecece;
+  padding: 10px;
+  color: #4e4e4e;
+  text-align: center;
+  margin:10px;
+}
+
+.box summary{
+  background: #cecece;
+cursor: pointer;
+padding: 10px;
+  user-select:none;
+    list-style:none;
+
+}
+
+
+
+
+
+
+</style>
+  
+</body>
+</html>
+
+
